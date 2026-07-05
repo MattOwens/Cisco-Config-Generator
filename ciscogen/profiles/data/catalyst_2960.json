@@ -1,0 +1,79 @@
+{
+  "model": "Catalyst 2960",
+  "family": "Catalyst 2960",
+  "device_class": "switch",
+  "os_type": "IOS",
+  "supported_os_versions": [
+    "12.2",
+    "15.0",
+    "15.2"
+  ],
+  "interface_naming": "TypeX/Y (e.g. GigabitEthernet0/1)",
+  "interfaces": [
+    "FastEthernet0/1",
+    "FastEthernet0/2",
+    "FastEthernet0/3",
+    "FastEthernet0/4",
+    "FastEthernet0/5",
+    "FastEthernet0/6",
+    "FastEthernet0/7",
+    "FastEthernet0/8",
+    "FastEthernet0/9",
+    "FastEthernet0/10",
+    "FastEthernet0/11",
+    "FastEthernet0/12",
+    "FastEthernet0/13",
+    "FastEthernet0/14",
+    "FastEthernet0/15",
+    "FastEthernet0/16",
+    "FastEthernet0/17",
+    "FastEthernet0/18",
+    "FastEthernet0/19",
+    "FastEthernet0/20",
+    "FastEthernet0/21",
+    "FastEthernet0/22",
+    "FastEthernet0/23",
+    "FastEthernet0/24",
+    "GigabitEthernet0/1",
+    "GigabitEthernet0/2"
+  ],
+  "interface_count": 26,
+  "capabilities": {
+    "layer2": true,
+    "layer3": false,
+    "svi": true,
+    "routed_ports": false,
+    "subinterfaces": false,
+    "etherchannel": true,
+    "pagp": true,
+    "dhcp_server": true,
+    "dhcp_snooping": true,
+    "dai": true,
+    "ip_source_guard": true,
+    "nat": false,
+    "acl": true,
+    "ospf": false,
+    "eigrp": false,
+    "bgp": false,
+    "rip": false,
+    "stp": true,
+    "vtp": true,
+    "port_security": true,
+    "storm_control": true,
+    "voice_vlan": true,
+    "interface_mtu": false,
+    "requires_trunk_encap": false
+  },
+  "syntax_notes": [
+    "Classic IOS syntax. Trunks are dot1q-only; no 'switchport trunk encapsulation' command.",
+    "Per-interface MTU is not configurable; use 'system mtu jumbo' globally instead."
+  ],
+  "platform_warnings": [
+    "Layer 2 only platform: SVIs are for management; inter-VLAN routing is not supported."
+  ],
+  "feature_warnings": {
+    "dhcp_server": "DHCP server requires the LAN Base image (15.0(2) or later).",
+    "dai": "Dynamic ARP Inspection requires the LAN Base image; LAN Lite does not support it.",
+    "interface_mtu": "Per-interface MTU is not supported; configure 'system mtu jumbo' globally."
+  }
+}

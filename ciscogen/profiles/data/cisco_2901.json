@@ -1,0 +1,61 @@
+{
+  "model": "Cisco 2901",
+  "family": "ISR G2",
+  "device_class": "router",
+  "os_type": "IOS",
+  "supported_os_versions": [
+    "15.0",
+    "15.1",
+    "15.2",
+    "15.4",
+    "15.7"
+  ],
+  "interface_naming": "TypeX/Y (e.g. GigabitEthernet0/0)",
+  "interfaces": [
+    "GigabitEthernet0/0",
+    "GigabitEthernet0/1"
+  ],
+  "interface_count": 2,
+  "capabilities": {
+    "layer2": false,
+    "layer3": true,
+    "svi": false,
+    "routed_ports": true,
+    "subinterfaces": true,
+    "etherchannel": false,
+    "pagp": false,
+    "dhcp_server": true,
+    "dhcp_snooping": false,
+    "dai": false,
+    "ip_source_guard": false,
+    "nat": true,
+    "acl": true,
+    "ospf": true,
+    "eigrp": true,
+    "bgp": true,
+    "rip": true,
+    "stp": false,
+    "vtp": false,
+    "port_security": false,
+    "storm_control": false,
+    "voice_vlan": false,
+    "interface_mtu": false,
+    "requires_trunk_encap": false
+  },
+  "syntax_notes": [
+    "Classic IOS router syntax.",
+    "Subinterfaces use 'encapsulation dot1Q <vlan>' for router-on-a-stick."
+  ],
+  "platform_warnings": [
+    "End-of-life platform; verify IOS image feature set (e.g. securityk9, datak9) for advanced features."
+  ],
+  "feature_warnings": {
+    "etherchannel": "EtherChannel is not typically available on onboard router ports of this platform.",
+    "layer2": "Switchport commands require an EtherSwitch service module; onboard ports are routed only.",
+    "svi": "SVIs require an EtherSwitch service module.",
+    "dmvpn": "Requires the securityk9 technology package license on ISR G2; verify with 'show license' before use.",
+    "ipsec": "Requires the securityk9 technology package license on ISR G2; verify with 'show license' before use.",
+    "zbf": "Requires the securityk9 technology package license on ISR G2; verify with 'show license' before use.",
+    "ikev2": "IKEv2 requires IOS 15.1(1)T or later on this platform."
+  }
+}

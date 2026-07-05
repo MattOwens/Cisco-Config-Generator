@@ -1,0 +1,239 @@
+{
+  "system": {
+    "label": "Management, AAA and monitoring",
+    "required": [],
+    "optional": [
+      "snmpv3",
+      "aaa_tacacs",
+      "aaa_radius",
+      "netflow",
+      "restconf",
+      "netconf"
+    ],
+    "verification_commands": [
+      "show version",
+      "show running-config"
+    ]
+  },
+  "interfaces": {
+    "label": "Interface configuration",
+    "required": [],
+    "optional": [
+      "basic_l2",
+      "basic_l3",
+      "svi",
+      "routed_ports",
+      "dhcp_relay",
+      "port_security",
+      "ip_source_guard"
+    ],
+    "verification_commands": [
+      "show ip interface brief",
+      "show interfaces status"
+    ]
+  },
+  "vlans": {
+    "label": "VLAN and Layer 2 security",
+    "required": [],
+    "optional": [
+      "basic_l2",
+      "dhcp_snooping",
+      "dai",
+      "ip_source_guard",
+      "port_security",
+      "private_vlan",
+      "stackwise"
+    ],
+    "verification_commands": [
+      "show vlan brief",
+      "show spanning-tree summary"
+    ]
+  },
+  "vrf": {
+    "label": "VRF-Lite",
+    "required": [
+      "vrf_lite"
+    ],
+    "verification_commands": [
+      "show ip route vrf *",
+      "show running-config | section ^vrf definition"
+    ]
+  },
+  "layer3": {
+    "label": "Static routing and PBR",
+    "required": [
+      "static_routing"
+    ],
+    "optional": [
+      "pbr"
+    ],
+    "verification_commands": [
+      "show ip route"
+    ]
+  },
+  "ipv6": {
+    "label": "IPv6",
+    "required": [
+      "ipv6"
+    ],
+    "optional": [
+      "ospfv3"
+    ],
+    "verification_commands": [
+      "show ipv6 interface brief",
+      "show ipv6 route",
+      "show ipv6 ospf neighbor"
+    ]
+  },
+  "dhcp": {
+    "label": "DHCP server",
+    "required": [
+      "dhcp_server"
+    ],
+    "verification_commands": [
+      "show ip dhcp binding",
+      "show ip dhcp pool"
+    ]
+  },
+  "nat": {
+    "label": "NAT/PAT",
+    "required": [
+      "nat"
+    ],
+    "verification_commands": [
+      "show ip nat translations",
+      "show ip nat statistics"
+    ]
+  },
+  "acls": {
+    "label": "Access lists",
+    "required": [],
+    "verification_commands": [
+      "show access-lists",
+      "show running-config | section access-list"
+    ]
+  },
+  "routing": {
+    "label": "Dynamic routing",
+    "required": [
+      "basic_l3"
+    ],
+    "optional": [
+      "ospf",
+      "eigrp",
+      "bgp",
+      "rip"
+    ],
+    "verification_commands": [
+      "show ip route",
+      "show ip ospf neighbor",
+      "show ip eigrp neighbors",
+      "show ip bgp summary"
+    ]
+  },
+  "tunnels": {
+    "label": "IP Tunnels & VPN",
+    "required": [
+      "gre"
+    ],
+    "optional": [
+      "multipoint_gre",
+      "nhrp",
+      "dmvpn",
+      "vti",
+      "ipsec",
+      "ikev1",
+      "ikev2",
+      "tunnel_protection"
+    ],
+    "verification_commands": [
+      "show interfaces tunnel",
+      "show ip interface brief",
+      "show dmvpn",
+      "show ip nhrp",
+      "show crypto ikev2 sa",
+      "show crypto ipsec sa",
+      "show ip route"
+    ]
+  },
+  "dmvpn": {
+    "label": "DMVPN",
+    "required": [
+      "gre",
+      "nhrp",
+      "dmvpn"
+    ],
+    "optional": [
+      "ipsec",
+      "ikev1",
+      "ikev2",
+      "tunnel_protection"
+    ],
+    "verification_commands": [
+      "show dmvpn",
+      "show ip nhrp",
+      "show crypto isakmp sa",
+      "show crypto ikev2 sa",
+      "show crypto ipsec sa",
+      "show ip route"
+    ]
+  },
+  "ipsla": {
+    "label": "IP SLA and object tracking",
+    "required": [
+      "ip_sla"
+    ],
+    "optional": [
+      "object_tracking",
+      "eem"
+    ],
+    "verification_commands": [
+      "show ip sla summary",
+      "show track",
+      "show ip route"
+    ]
+  },
+  "zbf": {
+    "label": "Zone-Based Firewall",
+    "required": [
+      "zone_based_firewall"
+    ],
+    "verification_commands": [
+      "show policy-map type inspect zone-pair",
+      "show zone security"
+    ]
+  },
+  "qos": {
+    "label": "QoS",
+    "required": [
+      "qos"
+    ],
+    "verification_commands": [
+      "show policy-map interface",
+      "show mls qos interface"
+    ]
+  },
+  "ha": {
+    "label": "Gateway redundancy",
+    "required": [],
+    "optional": [
+      "hsrp",
+      "vrrp",
+      "glbp",
+      "object_tracking"
+    ],
+    "verification_commands": [
+      "show standby brief",
+      "show vrrp brief",
+      "show glbp brief",
+      "show track"
+    ]
+  },
+  "custom_cli": {
+    "label": "Custom CLI",
+    "required": [],
+    "verification_commands": [
+      "show running-config"
+    ]
+  }
+}

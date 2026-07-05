@@ -1,0 +1,80 @@
+{
+  "model": "Catalyst 3750",
+  "family": "Catalyst 3750",
+  "device_class": "switch",
+  "os_type": "IOS",
+  "supported_os_versions": [
+    "12.2",
+    "15.0"
+  ],
+  "interface_naming": "TypeX/Y/Z (e.g. GigabitEthernet1/0/1)",
+  "interfaces": [
+    "GigabitEthernet1/0/1",
+    "GigabitEthernet1/0/2",
+    "GigabitEthernet1/0/3",
+    "GigabitEthernet1/0/4",
+    "GigabitEthernet1/0/5",
+    "GigabitEthernet1/0/6",
+    "GigabitEthernet1/0/7",
+    "GigabitEthernet1/0/8",
+    "GigabitEthernet1/0/9",
+    "GigabitEthernet1/0/10",
+    "GigabitEthernet1/0/11",
+    "GigabitEthernet1/0/12",
+    "GigabitEthernet1/0/13",
+    "GigabitEthernet1/0/14",
+    "GigabitEthernet1/0/15",
+    "GigabitEthernet1/0/16",
+    "GigabitEthernet1/0/17",
+    "GigabitEthernet1/0/18",
+    "GigabitEthernet1/0/19",
+    "GigabitEthernet1/0/20",
+    "GigabitEthernet1/0/21",
+    "GigabitEthernet1/0/22",
+    "GigabitEthernet1/0/23",
+    "GigabitEthernet1/0/24",
+    "GigabitEthernet1/0/25",
+    "GigabitEthernet1/0/26",
+    "GigabitEthernet1/0/27",
+    "GigabitEthernet1/0/28"
+  ],
+  "interface_count": 28,
+  "capabilities": {
+    "layer2": true,
+    "layer3": true,
+    "svi": true,
+    "routed_ports": true,
+    "subinterfaces": false,
+    "etherchannel": true,
+    "pagp": true,
+    "dhcp_server": true,
+    "dhcp_snooping": true,
+    "dai": true,
+    "ip_source_guard": true,
+    "nat": false,
+    "acl": true,
+    "ospf": true,
+    "eigrp": true,
+    "bgp": true,
+    "rip": true,
+    "stp": true,
+    "vtp": true,
+    "port_security": true,
+    "storm_control": true,
+    "voice_vlan": true,
+    "interface_mtu": false,
+    "requires_trunk_encap": true
+  },
+  "syntax_notes": [
+    "Classic IOS syntax. Trunk ports require 'switchport trunk encapsulation dot1q' before 'switchport mode trunk'.",
+    "Enable 'ip routing' globally before configuring SVI-based routing or routed ports.",
+    "Per-interface MTU is limited; 'system mtu' / 'system mtu jumbo' control frame size globally."
+  ],
+  "platform_warnings": [
+    "End-of-life platform; verify the IOS feature set (IP Base vs IP Services) matches the features you enable."
+  ],
+  "feature_warnings": {
+    "bgp": "BGP requires the IP Services image and has limited scale on this platform.",
+    "nat": "NAT is not supported on this platform."
+  }
+}

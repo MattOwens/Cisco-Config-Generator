@@ -1,0 +1,61 @@
+{
+  "model": "Cisco Catalyst 8000v",
+  "family": "Catalyst 8000v",
+  "device_class": "router",
+  "os_type": "IOS-XE",
+  "supported_os_versions": [
+    "17.4",
+    "17.6",
+    "17.9",
+    "17.12"
+  ],
+  "interface_naming": "TypeN flat numbering (e.g. GigabitEthernet1)",
+  "interfaces": [
+    "GigabitEthernet1",
+    "GigabitEthernet2",
+    "GigabitEthernet3",
+    "GigabitEthernet4"
+  ],
+  "interface_count": 4,
+  "capabilities": {
+    "layer2": false,
+    "layer3": true,
+    "svi": false,
+    "routed_ports": true,
+    "subinterfaces": true,
+    "etherchannel": false,
+    "pagp": false,
+    "dhcp_server": true,
+    "dhcp_snooping": false,
+    "dai": false,
+    "ip_source_guard": false,
+    "nat": true,
+    "acl": true,
+    "ospf": true,
+    "eigrp": true,
+    "bgp": true,
+    "rip": true,
+    "stp": false,
+    "vtp": false,
+    "port_security": false,
+    "storm_control": false,
+    "voice_vlan": false,
+    "interface_mtu": true,
+    "requires_trunk_encap": false
+  },
+  "syntax_notes": [
+    "IOS-XE router syntax; configuration commands largely match classic IOS.",
+    "Subinterfaces use 'encapsulation dot1Q <vlan>' for router-on-a-stick."
+  ],
+  "platform_warnings": [
+    "Virtual platform: interface names depend on the hypervisor NIC mapping."
+  ],
+  "feature_warnings": {
+    "etherchannel": "Port-channels are supported only in specific designs; verify before use.",
+    "layer2": "Switchport commands require an NIM/SM switch module; onboard ports are routed only.",
+    "svi": "SVIs require a switch module or virtual platform support.",
+    "dmvpn": "Requires the securityk9 license entitlement on this platform; verify with 'show license' / Smart Licensing before use.",
+    "ipsec": "Requires the securityk9 license entitlement on this platform; verify with 'show license' / Smart Licensing before use.",
+    "zbf": "Requires the securityk9 license entitlement on this platform; verify with 'show license' / Smart Licensing before use."
+  }
+}

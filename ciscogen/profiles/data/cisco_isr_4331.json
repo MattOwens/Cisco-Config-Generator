@@ -1,0 +1,62 @@
+{
+  "model": "Cisco ISR 4331",
+  "family": "ISR 4000",
+  "device_class": "router",
+  "os_type": "IOS-XE",
+  "supported_os_versions": [
+    "3.16",
+    "16.6",
+    "16.9",
+    "16.12",
+    "17.3",
+    "17.6"
+  ],
+  "interface_naming": "TypeX/Y/Z (e.g. GigabitEthernet0/0/0)",
+  "interfaces": [
+    "GigabitEthernet0/0/0",
+    "GigabitEthernet0/0/1",
+    "GigabitEthernet0/0/2"
+  ],
+  "interface_count": 3,
+  "capabilities": {
+    "layer2": false,
+    "layer3": true,
+    "svi": false,
+    "routed_ports": true,
+    "subinterfaces": true,
+    "etherchannel": false,
+    "pagp": false,
+    "dhcp_server": true,
+    "dhcp_snooping": false,
+    "dai": false,
+    "ip_source_guard": false,
+    "nat": true,
+    "acl": true,
+    "ospf": true,
+    "eigrp": true,
+    "bgp": true,
+    "rip": true,
+    "stp": false,
+    "vtp": false,
+    "port_security": false,
+    "storm_control": false,
+    "voice_vlan": false,
+    "interface_mtu": true,
+    "requires_trunk_encap": false
+  },
+  "syntax_notes": [
+    "IOS-XE router syntax; configuration commands largely match classic IOS.",
+    "Subinterfaces use 'encapsulation dot1Q <vlan>' for router-on-a-stick."
+  ],
+  "platform_warnings": [
+    "Throughput and some features vary by platform entitlement, IOS-XE image and release."
+  ],
+  "feature_warnings": {
+    "etherchannel": "Port-channels are supported only in specific designs; verify before use.",
+    "layer2": "Switchport commands require an NIM/SM switch module; onboard ports are routed only.",
+    "svi": "SVIs require a switch module or virtual platform support.",
+    "dmvpn": "Requires the securityk9 license entitlement on this platform; verify with 'show license' / Smart Licensing before use.",
+    "ipsec": "Requires the securityk9 license entitlement on this platform; verify with 'show license' / Smart Licensing before use.",
+    "zbf": "Requires the securityk9 license entitlement on this platform; verify with 'show license' / Smart Licensing before use."
+  }
+}
