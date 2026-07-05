@@ -1,0 +1,5 @@
+{
+  "name": "Cisco 1941 lab baseline",
+  "device_model": "Cisco 1941",
+  "sections_enabled": {"system": true, "interfaces": true, "layer3": true}
+}

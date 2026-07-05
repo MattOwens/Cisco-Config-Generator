@@ -1,0 +1,12 @@
+# Optional live SSH/deployment dependencies.
+# Core/offline Config Generator mode does not require these packages.
+#
+# Netmiko is the selected SSH backend because it is purpose-built for
+# Cisco-style network-device command and config workflows. Paramiko is used
+# transitively by Netmiko. Scrapli and AsyncSSH were considered, but this app
+# uses a conservative threaded command/response console rather than an async
+# terminal emulator.
+netmiko>=4.4
+
+# Optional future enhancement for OS keychain-backed credential prompts.
+keyring>=25.0

@@ -1,0 +1,12 @@
+{
+  "name": "Router-on-a-stick",
+  "sections_enabled": {"interfaces": true, "layer3": true},
+  "data": {
+    "interfaces": {
+      "subinterfaces": [
+        {"parent": "GigabitEthernet0/0", "vlan": "10", "description": "Users", "ip": "10.10.0.1", "mask": "255.255.255.0"},
+        {"parent": "GigabitEthernet0/0", "vlan": "20", "description": "Servers", "ip": "10.20.0.1", "mask": "255.255.255.0"}
+      ]
+    }
+  }
+}

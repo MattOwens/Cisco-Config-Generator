@@ -1,0 +1,8 @@
+{
+  "name": "Small branch router",
+  "sections_enabled": {"system": true, "interfaces": true, "dhcp": true, "nat": true, "security": true},
+  "data": {
+    "dhcp": {"pools": [{"name": "BRANCH-USERS", "network": "10.10.10.0", "mask": "255.255.255.0", "default_router": "10.10.10.1", "dns": "8.8.8.8"}]},
+    "nat": {"inside_interfaces": "GigabitEthernet0/0/1", "outside_interfaces": "GigabitEthernet0/0/0", "dynamic_enabled": true, "dynamic_acl": "BRANCH-NAT", "overload_interface": "GigabitEthernet0/0/0"}
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Internet edge router with NAT",
+  "sections_enabled": {"interfaces": true, "nat": true, "acls": true, "layer3": true},
+  "data": {
+    "acls": {"acls": [{"type": "standard", "id": "NAT-SOURCES", "rules": [{"action": "permit", "src": "10.0.0.0", "src_wildcard": "0.255.255.255"}]}]},
+    "nat": {"inside_interfaces": "GigabitEthernet0/0/1", "outside_interfaces": "GigabitEthernet0/0/0", "dynamic_enabled": true, "dynamic_acl": "NAT-SOURCES", "use_pool": false, "overload_interface": "GigabitEthernet0/0/0"},
+    "layer3": {"static_routes": [{"prefix": "0.0.0.0", "mask": "0.0.0.0", "next_hop": "203.0.113.1"}]}
+  }
+}

@@ -1,0 +1,6 @@
+# Runtime. tkinter ships with Python; SSH support is included so the
+# workspace works after a normal dependency install.
+-r requirements-deploy.txt
+
+# Development / testing:
+pytest>=7.0

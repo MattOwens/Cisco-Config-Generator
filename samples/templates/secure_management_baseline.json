@@ -1,0 +1,9 @@
+{
+  "name": "Secure management baseline",
+  "sections_enabled": {"system": true, "security": true, "acls": true, "misc": true},
+  "data": {
+    "system": {"ssh_enabled": true, "ssh_version2": true, "aaa_new_model": true, "aaa_methods": {"login": "local", "local_fallback": true}, "scp_server_enabled": true},
+    "acls": {"acls": [{"type": "standard", "id": "MGMT-ACCESS", "rules": [{"action": "permit", "src": "10.99.0.0", "src_wildcard": "0.0.0.255"}]}], "vty_acl": "MGMT-ACCESS"},
+    "security": {"disable_http": true, "disable_https": true, "ssh_only": true}
+  }
+}

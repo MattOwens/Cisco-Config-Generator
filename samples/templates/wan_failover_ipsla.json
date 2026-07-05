@@ -1,0 +1,12 @@
+{
+  "name": "WAN failover with IP SLA",
+  "sections_enabled": {"ipsla": true},
+  "data": {
+    "ipsla": {
+      "operations": [{"id": "1", "type": "icmp-echo", "target": "8.8.8.8", "source_interface": "GigabitEthernet0/0/0", "frequency": "5", "timeout": "1000"}],
+      "tracks": [{"id": "1", "sla_id": "1", "type": "reachability"}],
+      "tracked_routes": [{"prefix": "0.0.0.0", "mask": "0.0.0.0", "next_hop": "203.0.113.1", "track_id": "1"}],
+      "floating_routes": [{"prefix": "0.0.0.0", "mask": "0.0.0.0", "next_hop": "198.51.100.1", "distance": "250"}]
+    }
+  }
+}

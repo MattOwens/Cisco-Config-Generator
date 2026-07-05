@@ -1,0 +1,10 @@
+{
+  "name": "Basic Layer 2 access switch",
+  "sections_enabled": {"system": true, "interfaces": true, "vlans": true, "security": true},
+  "data": {
+    "vlans": {
+      "vlans": [{"id": "10", "name": "USERS"}, {"id": "99", "name": "MGMT"}],
+      "stp": {"portfast_default": true, "bpduguard_default": true}
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "BGP edge basic",
+  "sections_enabled": {"routing": true},
+  "data": {"routing": {"bgp": {"enabled": true, "asn": "65001", "router_id": "192.0.2.1", "neighbors": [{"ip": "203.0.113.1", "remote_as": "65000", "description": "ISP"}]}}}
+}

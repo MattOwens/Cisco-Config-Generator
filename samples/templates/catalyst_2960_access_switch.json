@@ -1,0 +1,6 @@
+{
+  "name": "Catalyst 2960 access switch",
+  "device_model": "Catalyst 2960",
+  "sections_enabled": {"vlans": true, "interfaces": true, "security": true},
+  "data": {"vlans": {"dhcp_snooping": {"enabled": true, "vlans": "10,20", "trusted_interfaces": "GigabitEthernet0/1"}}}
+}

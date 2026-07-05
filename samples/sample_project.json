@@ -1,0 +1,687 @@
+{
+  "schema_version": 2,
+  "device": {
+    "model": "Catalyst 9300",
+    "os_type": "IOS-XE",
+    "os_version": "17.9"
+  },
+  "sections_enabled": {
+    "system": true,
+    "vrf": false,
+    "interfaces": true,
+    "vlans": true,
+    "layer3": true,
+    "ipv6": false,
+    "dhcp": true,
+    "nat": false,
+    "acls": true,
+    "routing": true,
+    "tunnels": false,
+    "ipsla": false,
+    "zbf": false,
+    "qos": false,
+    "ha": false,
+    "security": true,
+    "misc": true,
+    "custom_cli": false,
+    "dmvpn": false
+  },
+  "options": {
+    "include_comments": false
+  },
+  "data": {
+    "system": {
+      "hostname": "SW-ACCESS-01",
+      "domain_name": "corp.example.local",
+      "enable_secret": "S3cure-Enable!24",
+      "service_password_encryption": true,
+      "timestamps": "datetime msec",
+      "no_domain_lookup": true,
+      "name_servers": "",
+      "banner_motd": "Unauthorized access is prohibited.\nAll activity is monitored and logged.",
+      "banner_login": "",
+      "users": [
+        {
+          "username": "netadmin",
+          "password": "N3tadmin!Pass24",
+          "privilege": "15",
+          "use_secret": true
+        }
+      ],
+      "aaa_new_model": true,
+      "aaa_local_auth": true,
+      "ssh_enabled": true,
+      "ssh_version2": true,
+      "generate_rsa": true,
+      "rsa_modulus": "2048",
+      "ssh_timeout": "60",
+      "ssh_auth_retries": "3",
+      "console": {
+        "login_local": true,
+        "password": "",
+        "exec_timeout_min": "10",
+        "exec_timeout_sec": "0",
+        "logging_sync": true
+      },
+      "vty": {
+        "login_local": true,
+        "transport": "ssh",
+        "exec_timeout_min": "10",
+        "exec_timeout_sec": "0",
+        "logging_sync": true,
+        "lines": "0 15"
+      },
+      "logging_buffered": "16384",
+      "logging_hosts": "10.99.0.100",
+      "ntp_servers": "10.99.0.1, 10.99.0.2",
+      "logging_severity": "",
+      "logging_source_interface": "",
+      "ntp_source_interface": "",
+      "snmp": {
+        "communities": [
+          {
+            "community": "corp-netmon-ro",
+            "mode": "RO"
+          }
+        ],
+        "location": "HQ - IDF 2, Rack 4",
+        "contact": "noc@corp.example.local",
+        "views": [],
+        "groups": [],
+        "users": [],
+        "source_interface": ""
+      },
+      "tacacs": {
+        "servers": [],
+        "source_interface": ""
+      },
+      "radius": {
+        "servers": [],
+        "source_interface": ""
+      },
+      "aaa_methods": {
+        "login": "local",
+        "authorization_exec": false,
+        "accounting_commands": false,
+        "local_fallback": true
+      },
+      "ntp_authentication": {
+        "enabled": false,
+        "key_id": "",
+        "key": "",
+        "trusted_key": ""
+      },
+      "netflow": {
+        "enabled": false,
+        "exporter": "",
+        "destination": "",
+        "source_interface": "",
+        "transport_port": "2055",
+        "interfaces": ""
+      },
+      "restconf_enabled": false,
+      "netconf_enabled": false,
+      "scp_server_enabled": false,
+      "banner_exec": "",
+      "mgmt_svi": {
+        "enabled": false,
+        "vlan": "99",
+        "ip": "",
+        "mask": "",
+        "description": "Management"
+      },
+      "mgmt_interface": {
+        "enabled": false,
+        "name": "",
+        "ip": "",
+        "mask": ""
+      },
+      "default_gateway": "",
+      "default_route": ""
+    },
+    "interfaces": {
+      "physical": [
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/1"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/2"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/3"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/4"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/5"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/6"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/7"
+        },
+        {
+          "mode": "access",
+          "access_vlan": "10",
+          "voice_vlan": "20",
+          "portfast": true,
+          "bpduguard": true,
+          "ps_enabled": true,
+          "ps_max": "3",
+          "ps_violation": "restrict",
+          "ps_sticky": true,
+          "enabled": true,
+          "description": "User + phone",
+          "name": "GigabitEthernet1/0/8"
+        },
+        {
+          "name": "TenGigabitEthernet1/1/1",
+          "mode": "trunk",
+          "native_vlan": "99",
+          "allowed_vlans": "10,20,30,99",
+          "nonegotiate": true,
+          "channel_group": "1",
+          "channel_mode": "active",
+          "description": "Uplink to CORE-01 Te1/1/1",
+          "enabled": true
+        },
+        {
+          "name": "TenGigabitEthernet1/1/2",
+          "mode": "trunk",
+          "native_vlan": "99",
+          "allowed_vlans": "10,20,30,99",
+          "nonegotiate": true,
+          "channel_group": "1",
+          "channel_mode": "active",
+          "description": "Uplink to CORE-02 Te1/1/1",
+          "enabled": true
+        }
+      ],
+      "port_channels": [
+        {
+          "id": "1",
+          "mode": "trunk",
+          "native_vlan": "99",
+          "allowed_vlans": "10,20,30,99",
+          "description": "Uplink bundle to core"
+        }
+      ],
+      "subinterfaces": [],
+      "svis": [
+        {
+          "vlan": "10",
+          "description": "Users gateway",
+          "ip": "10.10.0.1",
+          "mask": "255.255.255.0",
+          "enabled": true
+        },
+        {
+          "vlan": "30",
+          "description": "Servers gateway",
+          "ip": "10.30.0.1",
+          "mask": "255.255.255.0",
+          "enabled": true
+        },
+        {
+          "vlan": "99",
+          "description": "Management",
+          "ip": "10.99.0.10",
+          "mask": "255.255.255.0",
+          "enabled": true
+        }
+      ]
+    },
+    "vlans": {
+      "vlans": [
+        {
+          "id": "10",
+          "name": "USERS"
+        },
+        {
+          "id": "20",
+          "name": "VOICE"
+        },
+        {
+          "id": "30",
+          "name": "SERVERS"
+        },
+        {
+          "id": "99",
+          "name": "MGMT"
+        }
+      ],
+      "blackhole_vlan": "999",
+      "stp": {
+        "mode": "rapid-pvst",
+        "portfast_default": false,
+        "bpduguard_default": false,
+        "root_primary": "10,20,30,99",
+        "root_secondary": "",
+        "priority_vlans": "",
+        "priority_value": ""
+      },
+      "dhcp_snooping": {
+        "enabled": true,
+        "vlans": "10,20",
+        "trusted_interfaces": "Port-channel1"
+      },
+      "dai": {
+        "enabled": true,
+        "vlans": "10,20",
+        "trusted_interfaces": "Port-channel1"
+      },
+      "vtp": {
+        "enabled": true,
+        "mode": "transparent",
+        "domain": "CORP",
+        "password": ""
+      },
+      "errdisable_recovery": {
+        "enabled": false,
+        "causes": "",
+        "interval": "300"
+      },
+      "private_vlans": [],
+      "span_sessions": [],
+      "stackwise": {
+        "enabled": false,
+        "switch_number": "",
+        "priority": ""
+      }
+    },
+    "vrf": {
+      "vrfs": [],
+      "interface_assignments": [],
+      "static_routes": [],
+      "dhcp_relays": [],
+      "ospf": [],
+      "bgp": []
+    },
+    "layer3": {
+      "ip_routing": true,
+      "static_routes": [
+        {
+          "prefix": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "next_hop": "10.99.0.1",
+          "exit_interface": "",
+          "distance": "",
+          "name": "DEFAULT",
+          "permanent": false
+        }
+      ],
+      "prefix_lists": [],
+      "route_maps": [],
+      "pbr_apply": []
+    },
+    "ipv6": {
+      "unicast_routing": false,
+      "interface_addresses": [],
+      "static_routes": [],
+      "acls": [],
+      "ospfv3": {
+        "enabled": false,
+        "process_id": "1",
+        "router_id": "",
+        "interfaces": []
+      },
+      "dhcp_relays": []
+    },
+    "dhcp": {
+      "excluded": [
+        {
+          "start": "10.10.0.1",
+          "end": "10.10.0.20"
+        }
+      ],
+      "pools": [
+        {
+          "name": "USERS",
+          "network": "10.10.0.0",
+          "mask": "255.255.255.0",
+          "default_router": "10.10.0.1",
+          "dns": "10.30.0.53, 10.30.0.54",
+          "domain": "corp.example.local",
+          "lease_days": "7",
+          "option150": ""
+        }
+      ],
+      "static_bindings": []
+    },
+    "nat": {
+      "inside_interfaces": "",
+      "outside_interfaces": "",
+      "static_rules": [],
+      "dynamic_enabled": false,
+      "dynamic_acl": "",
+      "use_pool": false,
+      "pool_name": "",
+      "pool_start": "",
+      "pool_end": "",
+      "pool_mask": "",
+      "overload": true,
+      "overload_interface": ""
+    },
+    "acls": {
+      "acls": [
+        {
+          "type": "standard",
+          "id": "MGMT-ACCESS",
+          "rules": [
+            {
+              "action": "remark",
+              "remark": "Management subnet only"
+            },
+            {
+              "action": "permit",
+              "src": "10.99.0.0",
+              "src_wildcard": "0.0.0.255"
+            }
+          ]
+        }
+      ],
+      "interface_apply": [],
+      "vty_acl": "MGMT-ACCESS",
+      "vty_bindings": [],
+      "route_map_bindings": [],
+      "management_plane_acl": ""
+    },
+    "routing": {
+      "ospf": {
+        "enabled": true,
+        "process_id": "1",
+        "router_id": "10.99.0.10",
+        "networks": [
+          {
+            "network": "10.10.0.0",
+            "wildcard": "0.0.0.255",
+            "area": "0"
+          },
+          {
+            "network": "10.30.0.0",
+            "wildcard": "0.0.0.255",
+            "area": "0"
+          },
+          {
+            "network": "10.99.0.0",
+            "wildcard": "0.0.0.255",
+            "area": "0"
+          }
+        ],
+        "passive_default": false,
+        "passive_interfaces": "Vlan10, Vlan30",
+        "default_originate": false,
+        "default_originate_always": false,
+        "area_auth_area": "",
+        "area_auth_md5": true,
+        "redistribute_static": false,
+        "redistribute_connected": false
+      },
+      "eigrp": {
+        "enabled": false,
+        "asn": "",
+        "router_id": "",
+        "networks": [],
+        "passive_interfaces": "",
+        "no_auto_summary": true,
+        "redistribute_static": false
+      },
+      "bgp": {
+        "enabled": false,
+        "asn": "",
+        "router_id": "",
+        "networks": [],
+        "neighbors": []
+      },
+      "rip": {
+        "enabled": false,
+        "version2": true,
+        "no_auto_summary": true,
+        "networks": "",
+        "passive_interfaces": ""
+      }
+    },
+    "dmvpn": {
+      "enabled": false,
+      "role": "Hub",
+      "phase": "Phase 3",
+      "tunnel_number": "0",
+      "description": "",
+      "tunnel_ip": "",
+      "tunnel_mask": "",
+      "tunnel_source_interface": "",
+      "tunnel_source_ip": "",
+      "tunnel_key": "",
+      "tunnel_mode": "gre multipoint",
+      "nhrp_network_id": "",
+      "nhrp_authentication": "",
+      "nhrp_holdtime": "600",
+      "nhrp_map_multicast": "dynamic",
+      "nhrp_nhs": [],
+      "nhrp_static_maps": [],
+      "nhrp_redirect": true,
+      "nhrp_shortcut": true,
+      "ip_mtu": "1400",
+      "tcp_mss": "1360",
+      "bandwidth": "",
+      "delay": "",
+      "ipsec_enabled": false,
+      "ike_version": "IKEv2",
+      "pre_shared_key": "",
+      "ikev1_policy": {
+        "number": "10",
+        "encryption": "aes 256",
+        "hash": "sha256",
+        "authentication": "pre-share",
+        "group": "14",
+        "lifetime": "86400"
+      },
+      "ikev1_transform_set": "DMVPN-TS",
+      "ikev2_proposal": "DMVPN-IKEV2-PROP",
+      "ikev2_policy": "DMVPN-IKEV2-POLICY",
+      "ikev2_keyring": "DMVPN-KEYRING",
+      "ikev2_profile": "DMVPN-IKEV2-PROFILE",
+      "ipsec_profile": "DMVPN-IPSEC-PROFILE",
+      "tunnel_protection_profile": "DMVPN-IPSEC-PROFILE",
+      "nat_traversal_note": true,
+      "vrf": "",
+      "routing": {
+        "static_routes": [],
+        "ospf": {
+          "enabled": false,
+          "process_id": "1",
+          "area": "0",
+          "network_type": "point-to-multipoint",
+          "cost": "",
+          "authentication": ""
+        },
+        "eigrp": {
+          "enabled": false,
+          "asn": "",
+          "networks": [],
+          "hub_disable_split_horizon": true,
+          "hub_disable_next_hop_self": true
+        },
+        "bgp": {
+          "enabled": false,
+          "local_as": "",
+          "neighbors": [],
+          "networks": [],
+          "route_reflector": false,
+          "next_hop_self": true
+        }
+      }
+    },
+    "tunnels": {
+      "tunnels": []
+    },
+    "ipsla": {
+      "operations": [],
+      "tracks": [],
+      "tracked_routes": [],
+      "floating_routes": [],
+      "eem": []
+    },
+    "zbf": {
+      "zones": [],
+      "interface_memberships": [],
+      "class_maps": [],
+      "policy_maps": [],
+      "zone_pairs": [],
+      "self_zone_warnings": true
+    },
+    "qos": {
+      "trust": [],
+      "autoqos": [],
+      "class_maps": [],
+      "policy_maps": [],
+      "service_policies": []
+    },
+    "ha": {
+      "groups": []
+    },
+    "security": {
+      "disable_http": true,
+      "disable_https": true,
+      "no_small_servers": true,
+      "no_pad": true,
+      "no_ip_source_route": true,
+      "tcp_keepalives": true,
+      "login_block_enabled": true,
+      "login_block_seconds": "120",
+      "login_block_attempts": "3",
+      "login_block_within": "60",
+      "min_password_length": "10",
+      "ssh_only": true
+    },
+    "misc": {
+      "cdp_run": true,
+      "lldp_run": true,
+      "clock_timezone_name": "EST",
+      "clock_timezone_hours": "-5",
+      "clock_timezone_minutes": "0",
+      "archive_enabled": true,
+      "archive_path": "flash:archive",
+      "archive_write_memory": true,
+      "archive_time_period": "1440"
+    },
+    "custom_cli": {
+      "global": "",
+      "pre_interface": "",
+      "interface_snippets": [],
+      "post_routing": "",
+      "end": "",
+      "unparsed_imported_lines": ""
+    }
+  },
+  "last_generated": "service timestamps debug datetime msec\nservice timestamps log datetime msec\nservice password-encryption\nno ip domain-lookup\nno ip http server\nno ip http secure-server\nno service tcp-small-servers\nno service udp-small-servers\nno service pad\nno ip source-route\nservice tcp-keepalives-in\nservice tcp-keepalives-out\nlldp run\nclock timezone EST -5 0\nip routing\n!\nhostname SW-ACCESS-01\nip domain-name corp.example.local\nenable secret S3cure-Enable!24\nbanner motd ^\nUnauthorized access is prohibited.\nAll activity is monitored and logged.\n^\ncrypto key generate rsa modulus 2048\nip ssh version 2\nip ssh time-out 60\nip ssh authentication-retries 3\nlogin block-for 120 attempts 3 within 60\nsecurity passwords min-length 10\n!\naaa new-model\naaa authentication login default local\nusername netadmin privilege 15 secret N3tadmin!Pass24\n!\nvlan 10\n name USERS\nvlan 20\n name VOICE\nvlan 30\n name SERVERS\nvlan 99\n name MGMT\nvlan 999\n name BLACKHOLE-UNUSED\n!\nspanning-tree mode rapid-pvst\nspanning-tree vlan 10,20,30,99 root primary\nip dhcp snooping\nip dhcp snooping vlan 10,20\nip arp inspection vlan 10,20\nvtp domain CORP\nvtp mode transparent\n!\ninterface GigabitEthernet1/0/1\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/2\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/3\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/4\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/5\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/6\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/7\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface GigabitEthernet1/0/8\n description User + phone\n switchport mode access\n switchport access vlan 10\n switchport voice vlan 20\n spanning-tree portfast\n spanning-tree bpduguard enable\n switchport port-security\n switchport port-security maximum 3\n switchport port-security violation restrict\n switchport port-security mac-address sticky\n no shutdown\ninterface TenGigabitEthernet1/1/1\n description Uplink to CORE-01 Te1/1/1\n switchport mode trunk\n switchport trunk native vlan 99\n switchport trunk allowed vlan 10,20,30,99\n switchport nonegotiate\n channel-group 1 mode active\n no shutdown\ninterface TenGigabitEthernet1/1/2\n description Uplink to CORE-02 Te1/1/1\n switchport mode trunk\n switchport trunk native vlan 99\n switchport trunk allowed vlan 10,20,30,99\n switchport nonegotiate\n channel-group 1 mode active\n no shutdown\ninterface Port-channel1\n description Uplink bundle to core\n switchport mode trunk\n switchport trunk native vlan 99\n switchport trunk allowed vlan 10,20,30,99\n ip dhcp snooping trust\n ip arp inspection trust\ninterface Vlan10\n description Users gateway\n ip address 10.10.0.1 255.255.255.0\n no shutdown\ninterface Vlan30\n description Servers gateway\n ip address 10.30.0.1 255.255.255.0\n no shutdown\ninterface Vlan99\n description Management\n ip address 10.99.0.10 255.255.255.0\n no shutdown\n!\nip dhcp excluded-address 10.10.0.1 10.10.0.20\nip dhcp pool USERS\n network 10.10.0.0 255.255.255.0\n default-router 10.10.0.1\n dns-server 10.30.0.53 10.30.0.54\n domain-name corp.example.local\n lease 7\n!\nip access-list standard MGMT-ACCESS\n remark Management subnet only\n permit 10.99.0.0 0.0.0.255\n!\nrouter ospf 1\n router-id 10.99.0.10\n passive-interface Vlan10\n passive-interface Vlan30\n network 10.10.0.0 0.0.0.255 area 0\n network 10.30.0.0 0.0.0.255 area 0\n network 10.99.0.0 0.0.0.255 area 0\n!\nip route 0.0.0.0 0.0.0.0 10.99.0.1 name DEFAULT\n!\nline con 0\n login local\n exec-timeout 10 0\n logging synchronous\nline vty 0 15\n login local\n exec-timeout 10 0\n logging synchronous\n transport input ssh\n access-class MGMT-ACCESS in\n!\nlogging buffered 16384\nlogging host 10.99.0.100\nntp server 10.99.0.1\nntp server 10.99.0.2\nsnmp-server community corp-netmon-ro RO\nsnmp-server location HQ - IDF 2, Rack 4\nsnmp-server contact noc@corp.example.local\n!\narchive\n path flash:archive\n write-memory\n time-period 1440\n!\nend\n",
+  "edited_config": "",
+  "imported_config": "",
+  "import_warnings": [],
+  "warnings": [
+    {
+      "severity": "warning",
+      "section": "system",
+      "message": "SNMPv2 communities are configured; restrict management access by setting the management-plane ACL in the Access Lists section."
+    },
+    {
+      "severity": "info",
+      "section": "system",
+      "message": "logging source interface is not set; consider pinning management traffic to a stable interface."
+    },
+    {
+      "severity": "info",
+      "section": "system",
+      "message": "NTP source interface is not set; consider pinning management traffic to a stable interface."
+    },
+    {
+      "severity": "info",
+      "section": "acls",
+      "message": "ACL 'MGMT-ACCESS': remember the implicit 'deny any' at the end."
+    },
+    {
+      "severity": "info",
+      "section": "platform",
+      "message": "Feature availability varies by SKU, IOS-XE image and release. Verify on the target device before deployment."
+    }
+  ]
+}

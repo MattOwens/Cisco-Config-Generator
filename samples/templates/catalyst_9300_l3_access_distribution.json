@@ -1,0 +1,5 @@
+{
+  "name": "Catalyst 9300 L3 access/distribution",
+  "device_model": "Catalyst 9300",
+  "sections_enabled": {"vlans": true, "interfaces": true, "layer3": true, "routing": true, "ha": true}
+}

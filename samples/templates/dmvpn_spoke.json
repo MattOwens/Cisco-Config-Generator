@@ -1,0 +1,9 @@
+{
+  "name": "DMVPN spoke",
+  "sections_enabled": {"tunnels": true},
+  "data": {
+    "tunnels": {"tunnels": [
+      {"enabled": true, "name": "DMVPN-SPOKE", "type": "GRE multipoint (DMVPN)", "role": "Spoke", "phase": "Phase 3", "tunnel_number": "100", "tunnel_ip": "10.255.0.11", "tunnel_mask": "255.255.255.0", "tunnel_source_interface": "GigabitEthernet0/0/0", "nhrp_network_id": "100", "nhrp_shortcut": true, "nhrp_nhs": [{"address": "10.255.0.1", "nbma": "203.0.113.10"}], "ip_mtu": "1400", "tcp_mss": "1360", "ipsec_enabled": true, "ike_version": "IKEv2", "pre_shared_key": "ChangeMe-Strong-Key"}
+    ]}
+  }
+}

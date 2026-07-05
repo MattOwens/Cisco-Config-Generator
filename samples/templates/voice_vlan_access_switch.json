@@ -1,0 +1,8 @@
+{
+  "name": "Voice VLAN access switch",
+  "sections_enabled": {"vlans": true, "interfaces": true, "qos": true},
+  "data": {
+    "vlans": {"vlans": [{"id": "10", "name": "DATA"}, {"id": "20", "name": "VOICE"}]},
+    "qos": {"trust": [{"interface": "GigabitEthernet1/0/1", "mode": "dscp"}]}
+  }
+}

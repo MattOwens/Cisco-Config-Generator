@@ -1,0 +1,9 @@
+{
+  "name": "DMVPN hub",
+  "sections_enabled": {"tunnels": true, "routing": true},
+  "data": {
+    "tunnels": {"tunnels": [
+      {"enabled": true, "name": "DMVPN-HUB", "type": "GRE multipoint (DMVPN)", "role": "Hub", "phase": "Phase 3", "tunnel_number": "100", "tunnel_ip": "10.255.0.1", "tunnel_mask": "255.255.255.0", "tunnel_source_interface": "GigabitEthernet0/0/0", "nhrp_network_id": "100", "nhrp_redirect": true, "ip_mtu": "1400", "tcp_mss": "1360", "ipsec_enabled": true, "ike_version": "IKEv2", "pre_shared_key": "ChangeMe-Strong-Key"}
+    ]}
+  }
+}

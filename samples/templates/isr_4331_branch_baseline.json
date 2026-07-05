@@ -1,0 +1,5 @@
+{
+  "name": "ISR 4331 branch baseline",
+  "device_model": "Cisco ISR 4331",
+  "sections_enabled": {"system": true, "interfaces": true, "nat": true, "ipsla": true}
+}

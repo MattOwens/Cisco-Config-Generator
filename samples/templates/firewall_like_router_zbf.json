@@ -1,0 +1,12 @@
+{
+  "name": "Firewall-like router with ZBF",
+  "sections_enabled": {"zbf": true, "acls": true},
+  "data": {
+    "zbf": {
+      "zones": [{"name": "INSIDE"}, {"name": "OUTSIDE"}],
+      "class_maps": [{"name": "CM-INSIDE-OUT", "protocols": "http, https, dns, icmp"}],
+      "policy_maps": [{"name": "PM-INSIDE-OUT", "classes": "CM-INSIDE-OUT", "class_default_action": "drop"}],
+      "zone_pairs": [{"name": "ZP-IN-OUT", "source": "INSIDE", "destination": "OUTSIDE", "policy": "PM-INSIDE-OUT"}]
+    }
+  }
+}
